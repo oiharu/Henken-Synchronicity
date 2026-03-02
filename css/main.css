@@ -92,6 +92,9 @@ div.boothcut img{
 
 .sect-howToPlay h2{
   margin-top: 5rem;
+}
+
+.sect-howToPlay h2 span{
   background: linear-gradient(
     to bottom,
     transparent 60%,
