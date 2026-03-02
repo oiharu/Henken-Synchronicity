@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/main.css">
+
+<title>偏見シンクロニシティ | オイハル実験室</title>
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+<!-- ヒーロー -->
+<section class="hero">
+  <div>
+    <h1>偏見シンクロニシティ</h1>
+    <div class="big">偏見が好きになるゲームをつくりました。</div>
+  </div>
+</section>
+
+<section class="boothcut">
+  <img src="img/img_boothcut_01.jpg" alt="">
+</section>
+
+<!-- 実例紹介 -->
+<section class="sect-leadCopy">
+  <div class="big">
+    話を盛りがちなのは<br><br>
+    “関西出身のB型”か、<br>
+    “サッカー部出身の広告代理店勤務”か？
+  </div>
+
+  <div class="big" style="margin-top:80px;">
+    偏見だけで答えを<br>
+    <span class="sync">“シンクロ”</span>させろ！
+  </div>
+
+  <div class="big" style="margin-top:40px;">
+    正解がないからおもしろい。<br>そんな協力パーティゲームです。
+  </div>
+</section>
+
+<section class="sect-howToPlay">
+  <h1>遊び方</h1>
+  <h2>1. キャラクターを作ろう</h2>
+  <p>イラスト、血液型、出身地、職業などの属性をランダムに組み合わせて、4人のキャラクターを作ります。</p>
+  <h2>2. お題の発表</h2>
+  <p>親プレイヤーはお題カードを1枚ひいて、3つのお題からひとつを選んで読み上げます。</p>
+  <p>📢 一番、遅刻しがちなのは誰？</p>
+  <h2>3. 全員でお題に一番あうと思うキャラクターを指さそう</h2>
+  <p>全員で相談せず、「一番、遅刻しがち」だと思うキャラを同時に指さして、一致したら成功！</p>
+  <p>📝<a href="#">詳しい遊び方（PDF）</a></p>
+</section>
+
+<section class="sect-spec">
+  <dl>
+    <dt>プレイ時間</dt>
+    <dd>30min</dd>
+  </dl>
+  <dl>
+    <dt>プレイ人数</dt>
+    <dd>2～6人</dd>
+  </dl>
+</section>
+
+
+<!-- フッター -->
+<footer>
+  This chaotic experiment is conducted by<br><br>
+  オイハル実験室
+</footer>
+
+<div class="info">
+  <a href="https://x.com/oiharulabo">ゲムマ2026春 1日目 🚩【け-21】 最新情報/取り置きは X で</a>
+</div>
+
+<script>
+const questions = document.querySelectorAll('.question');
+
+function revealQuestions() {
+  questions.forEach(q => {
+    const top = q.getBoundingClientRect().top;
+    if (top < window.innerHeight * 0.7) {
+      q.classList.add('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', revealQuestions);
+revealQuestions();
+</script>
+
+<script>
+const column = document.querySelector('.column');
+
+window.addEventListener('scroll', () => {
+  const scroll = window.scrollY;
+  column.style.transform =
+    `translateX(-50%) rotate(${scroll * 0.02}deg)`;
+});
+</script>
+
+</body>
+</html>
